@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         h1{
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        text-decoration: underline red;
+        
+    }
+    pre{
+        color: rgb(111, 0, 255);
+        
+    }
+    header{
+        text-align: center;
+        font-weight: bolder;
+        font-size: 35px;
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <header> Maps and Sets</header>
+    <h1>"Problem: You are given a string (STR) of length N, consisting of only the lower case English alphabet. Your task is to remove all the duplicate occurrences of characters in the string. Input: abcadeecfb Output: abcdef"</h1>
+     <pre>
+     let a = "abcadeecfb";
+    let b = "";
+
+    for (let i = 0; i < a.length; i++) {
+    if (b.indexOf(a[i]) === -1) {
+        b += a[i];
+    }
+    }
+    console.log(b);
+     </pre>
+           
+        <h1>"Problem: You are given a string (STR) of length N, consisting of only the lower case English alphabet. Your task is to remove all the duplicate occurrences of characters in the string. Input: abcadeecfb Output: abcdef" "Problem: You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps) Input: abcadeecfb Output: a=2 b=2 c=2 d=1 e=2 f=1"</h1>
+
+        <pre>
+   let a = "abcadeecfb";
+    let charCount = new Map();
+    for (let i = 0; i < a.length; i++) {
+        if (charCount.has(a[i])) {
+            charCount.set(a[i], charCount.get(a[i]) + 1);
+        } else {
+            charCount.set(a[i], 1);
+        }
+        }
+        
+        for (let [key, value] of charCount) {
+        console.log(key + "=" + value);
+        }
+        </pre>
+           
+</body>
+</html>
